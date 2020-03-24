@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+if (mPaasBuildType != 'aar') {
+    apply plugin: 'com.alipay.portal'
+}
+apply plugin: 'com.alipay.apollo.baseline.update'
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    signingConfigs {
+        release {
+            keyAlias 'mpaas123'
+            keyPassword 'mpaas123'
+            storeFile file('mpaas_keystore.jks')
+            storePassword 'mpaas123'
+        }
+        debug {
+            keyAlias 'mpaas123'
+            keyPassword 'mpaas123'
+            storeFile file('mpaas_keystore.jks')
+            storePassword 'mpaas123'
+        }
+
+    }
+
+    defaultConfig {
+        applicationId "com.mpaas.demo"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+    }
+    flavorDimensions "brand"
+    productFlavors {
+        hm {
+            applicationId "com.mpaas.demo"
+            signingConfig signingConfigs.debug
+            dimension 'brand'
+        }
+    }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+}
+
+
+dependencies {
+    implementation files('libs/mcssdk-2.0.2.jar')
+    implementation files('libs/pushsdk_v2.3.4.jar')
+
+    implementation 'com.android.support:support-v13:26.+'
+
+
+    if (mPaasBuildType == 'aar') {
+        implementation 'com.mpaas.android:push'
+
+        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-13')
+    }
+
+}

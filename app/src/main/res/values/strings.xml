@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">push_Demo</string>
+    <string name="push_title">推送</string>
+    <string name="push_init">初始化推送</string>
+    <string name="init_tips">Tips: 使用上面接口，可以实现移动推送的初始化</string>
+    <string name="push_bind">将用户id和token标识绑定</string>
+    <string name="bind_tips">Tips: push支持用户维度的推送。用户可以结合自身的用户系统将用户id和内建渠道的token绑定，进而实现基于用户id的推送</string>
+    <string name="push_unbind">解除用户id和token标识的绑定</string>
+    <string name="unbind_tips">Tips: 使用上面接口，可以实现用户id和token标识的解除绑定操作</string>
+    <string name="push_uploadThirdToken">上报第三方push的token</string>
+    <string name="uploadThirdToken_tips">Tips: 使用上面接口，可以实现第三方push的token的上传，但push不支持对内建渠道的token值的指定</string>
+    <string name="operation_result">操作结果将输入在这里</string>
+    <string name="use_default_msg">使用内置通知栏消息</string>
+</resources>
