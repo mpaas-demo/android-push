@@ -181,6 +181,19 @@
         </receiver>
         <!--推送相关 end-->
 
+        <!--日志上传所用的 service-->
+        <service
+            android:name="com.alipay.mobile.common.logging.process.LogServiceInToolsProcess"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":tools" />
+
+        <!--日志诊断相关-->
+        <service
+            android:name="com.alipay.mobile.logmonitor.ClientMonitorService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":push" />
 
         <!--接入华为推送 start-->
         <provider
