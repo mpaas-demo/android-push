@@ -1,9 +1,9 @@
 if (mPaasBuildType != 'aar') {
     apply plugin: 'com.alipay.portal'
+    apply plugin: 'com.alipay.apollo.baseline.update'
 } else {
     apply plugin: 'com.android.application'
 }
-apply plugin: 'com.alipay.apollo.baseline.update'
 
 
 android {
