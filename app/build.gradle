@@ -1,6 +1,7 @@
-apply plugin: 'com.android.application'
 if (mPaasBuildType != 'aar') {
     apply plugin: 'com.alipay.portal'
+} else {
+    apply plugin: 'com.android.application'
 }
 apply plugin: 'com.alipay.apollo.baseline.update'
 
@@ -69,7 +70,7 @@ dependencies {
     if (mPaasBuildType == 'aar') {
         implementation 'com.mpaas.android:push'
 
-        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-13')
+        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-3')
     }
 
 }
