@@ -15,6 +15,8 @@
 ### AAR编译
 1. gradle.properties里mPaasBuildType设置为aar
 
+请使用命令行编译此项目: ./gradlew clean installHmDebug
+
 
 ## 其他
 * 出于安全考虑，第三方推送所使用的密钥信息已从代码中移除，因此第三方推送在demo应用中无法正常运行。
