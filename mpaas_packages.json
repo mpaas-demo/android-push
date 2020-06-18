@@ -2,13 +2,13 @@
 	"base_line":"10.1.68",
 	"bundles":[
 		{
-			"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+			"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 			"bundleName":"android-phone-mobilesdk-logging",
 			"classifier":[
-				"util",
 				"tianyan",
-				"api",
-				"AndroidManifest"
+				"AndroidManifest",
+				"util",
+				"api"
 			],
 			"dependBundles":[
 				{
@@ -41,7 +41,7 @@
 			],
 			"dependBundles":[
 				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 					"bundleName":"android-phone-mobilesdk-logging",
 					"intersection":1
 				},
@@ -74,7 +74,7 @@
 				"android-phone-thirdparty-fastjson"
 			],
 			"dependsGav":[
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 				"com.alipay.android.phone.mobilesdk:transport-build:1.8.5.200319181707@jar",
 				"com.alipay.android.phone.mobilesdk:netsdkextdependapi-build:1.0.1.190620165649@jar",
 				"com.alipay.android.phone.thirdparty:wire-build:1.5.3.190214191738@jar",
@@ -91,7 +91,7 @@
 			],
 			"dependBundles":[
 				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 					"bundleName":"android-phone-mobilesdk-logging",
 					"intersection":11
 				},
@@ -136,7 +136,7 @@
 				"android-phone-thirdparty-fastjson"
 			],
 			"dependsGav":[
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 				"com.alipay.android.phone.mobilesdk:monitor-build:2.1.4.200415195720@jar",
 				"com.alipay.android.phone.thirdparty:utdid-build:2.1.1.200408204422@jar",
 				"com.alipay.android.phone.thirdparty:androidsupport-build:13.23.2.190624145529@jar",
@@ -167,14 +167,14 @@
 			],
 			"dependBundles":[
 				{
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
+					"bundleName":"android-phone-mobilesdk-logging",
+					"intersection":6
+				},
+				{
 					"bundleGav":"com.alipay.android.phone.mobilesdk:storage-build:1.7.0.200525171156@jar",
 					"bundleName":"android-phone-mobilesdk-storage",
 					"intersection":1
-				},
-				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
-					"bundleName":"android-phone-mobilesdk-logging",
-					"intersection":6
 				},
 				{
 					"bundleGav":"com.alipay.android.phone.thirdparty:utdid-build:2.1.1.200408204422@jar",
@@ -203,8 +203,8 @@
 				}
 			],
 			"depends":[
-				"android-phone-mobilesdk-storage",
 				"android-phone-mobilesdk-logging",
+				"android-phone-mobilesdk-storage",
 				"android-phone-thirdparty-utdid",
 				"android-phone-mobilecommon-lbs",
 				"android-phone-thirdparty-securityguard",
@@ -212,8 +212,8 @@
 				"android-phone-mobilesdk-netsdkextdependapi"
 			],
 			"dependsGav":[
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 				"com.alipay.android.phone.mobilesdk:storage-build:1.7.0.200525171156@jar",
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
 				"com.alipay.android.phone.thirdparty:utdid-build:2.1.1.200408204422@jar",
 				"com.alipay.android.phone.mobilecommon:lbs-build:1.9.0.200319193049@jar",
 				"com.alipay.android.phone.thirdparty:securityguard-build:5.4.2008.200319181707@jar",
@@ -255,7 +255,7 @@
 			],
 			"dependBundles":[
 				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 					"bundleName":"android-phone-mobilesdk-logging",
 					"intersection":5
 				}
@@ -264,7 +264,7 @@
 				"android-phone-mobilesdk-logging"
 			],
 			"dependsGav":[
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar"
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar"
 			],
 			"remove":false
 		},
@@ -289,14 +289,14 @@
 			],
 			"dependBundles":[
 				{
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
+					"bundleName":"android-phone-mobilesdk-logging",
+					"intersection":8
+				},
+				{
 					"bundleGav":"com.alipay.android.phone.mobilesdk:storage-build:1.7.0.200525171156@jar",
 					"bundleName":"android-phone-mobilesdk-storage",
 					"intersection":1
-				},
-				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
-					"bundleName":"android-phone-mobilesdk-logging",
-					"intersection":8
 				},
 				{
 					"bundleGav":"com.alipay.android.phone.mobilesdk:quinox-build:2.6.2.200421102403@jar",
@@ -325,8 +325,8 @@
 				}
 			],
 			"depends":[
-				"android-phone-mobilesdk-storage",
 				"android-phone-mobilesdk-logging",
+				"android-phone-mobilesdk-storage",
 				"android-phone-mobilesdk-quinox",
 				"android-phone-mobilesdk-framework",
 				"android-phone-mobilesdk-transport",
@@ -334,8 +334,8 @@
 				"android-phone-mobilesdk-liteprocess"
 			],
 			"dependsGav":[
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 				"com.alipay.android.phone.mobilesdk:storage-build:1.7.0.200525171156@jar",
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
 				"com.alipay.android.phone.mobilesdk:quinox-build:2.6.2.200421102403@jar",
 				"com.alipay.android.phone.mobilesdk:framework-build:2.6.2.200323184446@jar",
 				"com.alipay.android.phone.mobilesdk:transport-build:1.8.5.200319181707@jar",
@@ -353,7 +353,7 @@
 			],
 			"dependBundles":[
 				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 					"bundleName":"android-phone-mobilesdk-logging",
 					"intersection":32
 				}
@@ -362,21 +362,21 @@
 				"android-phone-mobilesdk-logging"
 			],
 			"dependsGav":[
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar"
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar"
 			],
 			"remove":false
 		},
 		{
-			"bundleGav":"com.alipay.android.phone.rome:pushsdk-build:2.4.0.200506193528@jar",
+			"bundleGav":"com.alipay.android.phone.rome:pushsdk-build:2.4.0.200608162958@jar",
 			"bundleName":"android-phone-rome-pushsdk",
 			"classifier":[
+				"longlink",
 				"api",
-				"AndroidManifest",
-				"longlink"
+				"AndroidManifest"
 			],
 			"dependBundles":[
 				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 					"bundleName":"android-phone-mobilesdk-logging",
 					"intersection":8
 				},
@@ -433,7 +433,7 @@
 				"android-phone-thirdparty-wire"
 			],
 			"dependsGav":[
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 				"com.alipay.mpaas.mpush.thirdparty.huawei:huawei-build:1.0.0.200507173343@jar",
 				"com.alipay.android.phone.thirdparty:xiaomipush-build:3.7.6.200506144435@jar",
 				"com.alipay.android.phone.mobilesdk:monitor-build:2.1.4.200415195720@jar",
@@ -490,7 +490,7 @@
 			"remove":false
 		},
 		{
-			"bundleGav":"com.mpaas.mps.adapter:mpaasmpsadapter-build:1.0.0.200408163310@jar",
+			"bundleGav":"com.mpaas.mps.adapter:mpaasmpsadapter-build:1.0.0.200608114853@jar",
 			"bundleName":"com-mpaas-mps-adapter-mpaasmpsadapter",
 			"classifier":[
 				"AndroidManifest",
@@ -498,14 +498,14 @@
 			],
 			"dependBundles":[
 				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 					"bundleName":"android-phone-mobilesdk-logging",
 					"intersection":6
 				},
 				{
-					"bundleGav":"com.alipay.android.phone.rome:pushsdk-build:2.4.0.200506193528@jar",
+					"bundleGav":"com.alipay.android.phone.rome:pushsdk-build:2.4.0.200608162958@jar",
 					"bundleName":"android-phone-rome-pushsdk",
-					"intersection":5
+					"intersection":7
 				},
 				{
 					"bundleGav":"com.alipay.android.phone.mobilesdk:monitor-build:2.1.4.200415195720@jar",
@@ -525,8 +525,8 @@
 				"android-phone-mobilesdk-rpc"
 			],
 			"dependsGav":[
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
-				"com.alipay.android.phone.rome:pushsdk-build:2.4.0.200506193528@jar",
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
+				"com.alipay.android.phone.rome:pushsdk-build:2.4.0.200608162958@jar",
 				"com.alipay.android.phone.mobilesdk:monitor-build:2.1.4.200415195720@jar",
 				"com.alipay.android.phone.mobilesdk:rpc-build:1.8.5.200228173401@jar"
 			],
@@ -540,14 +540,14 @@
 			],
 			"dependBundles":[
 				{
+					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
+					"bundleName":"android-phone-mobilesdk-logging",
+					"intersection":10
+				},
+				{
 					"bundleGav":"com.alipay.android.phone.mobilesdk:autotracker-build:1.0.0.200526105818@jar",
 					"bundleName":"android-phone-mobilesdk-autotracker",
 					"intersection":6
-				},
-				{
-					"bundleGav":"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
-					"bundleName":"android-phone-mobilesdk-logging",
-					"intersection":10
 				},
 				{
 					"bundleGav":"com.alipay.android.phone.mobilesdk:monitor-build:2.1.4.200415195720@jar",
@@ -566,15 +566,15 @@
 				}
 			],
 			"depends":[
-				"android-phone-mobilesdk-autotracker",
 				"android-phone-mobilesdk-logging",
+				"android-phone-mobilesdk-autotracker",
 				"android-phone-mobilesdk-monitor",
 				"android-phone-mobilesdk-tianyanadapter",
 				"android-phone-thirdparty-androidsupport"
 			],
 			"dependsGav":[
+				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200608165103@jar",
 				"com.alipay.android.phone.mobilesdk:autotracker-build:1.0.0.200526105818@jar",
-				"com.alipay.android.phone.mobilesdk:logging-build:2.1.0.200525161643@jar",
 				"com.alipay.android.phone.mobilesdk:monitor-build:2.1.4.200415195720@jar",
 				"com.alipay.android.phone.mobilesdk:tianyanadapter-build:1.0.4.200228192135@jar",
 				"com.alipay.android.phone.thirdparty:androidsupport-build:13.23.2.190624145529@jar"
@@ -630,6 +630,6 @@
 		}
 	],
 	"cp_change_id":"cp_dailyRelease_19565",
-	"update_time":"1590653198",
-	"version_code":6
+	"update_time":"1592454235",
+	"version_code":7
 }
