@@ -193,7 +193,7 @@ public class MainActivity extends Activity {
     private void doSimpleUploadToken() {
         final ResultPbPB resultPbPB = MPPush.report(getApplicationContext(), PushMsgService.mAdToken
                 /*channel可以选择XIAOMI,HUAWEI和GCM*/
-                , PushOsType.HUAWEI.value(), PushMsgService.mThirdToken);
+                , PushMsgService.platformType, PushMsgService.mThirdToken);
         handlePbPBResult("第三方push标识上报操作", resultPbPB);
     }
 
