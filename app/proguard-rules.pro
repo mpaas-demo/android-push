@@ -24,3 +24,26 @@
 -keep public class * extends android.content.ContentProvider
 -keep public class * extends android.view.View
 -keep class com.mpaas.demo.**{*;}
+
+
+# huawei push 混淆配置
+-ignorewarnings
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-keep class com.huawei.hianalytics.**{*;}
+-keep class com.huawei.updatesdk.**{*;}
+-keep class com.huawei.**{*}
+
+
+# oppo push 混淆配置
+-keep class com.heytap.msp.** { *;}
+
+
+# vivo push 混淆配置
+-dontwarn com.vivo.push.**
+-keep class com.vivo.push.**{*; }
+-keep class com.vivo.vms.**{*; }
+-keep class   xxx.xxx.xxx.PushMessageReceiverImpl{*;}
