@@ -3,12 +3,12 @@ if (mPaasBuildType != 'aar') {
     apply plugin: 'com.alipay.apollo.baseline.update'
 } else {
     apply plugin: 'com.android.application'
+    apply plugin: 'com.alipay.apollo.baseline.config'
 }
 
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
     signingConfigs {
         release {
             keyAlias 'mpaas123'
@@ -22,12 +22,12 @@ android {
             storeFile file('mpaas_keystore.jks')
             storePassword 'mpaas123'
         }
-
     }
 
     defaultConfig {
-        applicationId "com.mpaas.demo"
-        minSdkVersion 18
+        applicationId "com.mpaas.app"
+//        minSdkVersion 18
+        minSdkVersion 19 // oppo 2.1.0 要求19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -37,18 +37,9 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'mpProguard.cfg'
             signingConfig signingConfigs.release
-        }
-
-    }
-    flavorDimensions "brand"
-    productFlavors {
-        hm {
-            applicationId "com.mpaas.demo"
-            signingConfig signingConfigs.debug
-            dimension 'brand'
         }
     }
     android {
@@ -61,16 +52,24 @@ android {
 
 
 dependencies {
-    implementation files('libs/mcssdk-2.0.2.jar')
-    implementation files('libs/pushsdk_v2.3.4.jar')
-
     implementation 'com.android.support:support-v13:26.+'
 
 
-    if (mPaasBuildType == 'aar') {
-        implementation 'com.mpaas.android:push'
+    // 厂商通道sdk
+    implementation 'com.huawei.hms:push:5.3.0.301'
+//    implementation files('libs/oppo-2.0.2.jar')
+    implementation files('libs/oppo-2.1.0.aar')
+    implementation files('libs/vivo_v2.3.4.jar')
 
-        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-7')
+
+    if (mPaasBuildType == 'aar') {
+        // mPaaS sdk
+        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-33')
+        implementation 'com.mpaas.android:push'
+        implementation 'com.mpaas.android:push-hms5'
+        implementation 'com.mpaas.android:push-mi'
+        implementation 'com.mpaas.android:push-oppo'
+        implementation 'com.mpaas.android:push-vivo'
     }
 
 }

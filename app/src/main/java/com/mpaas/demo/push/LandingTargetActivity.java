@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
 
+import com.alipay.pushsdk.data.MPPushMsg;
 import com.mpaas.demo.R;
 
 public class LandingTargetActivity extends FragmentActivity {
@@ -17,9 +18,9 @@ public class LandingTargetActivity extends FragmentActivity {
         Intent intent = getIntent();
         if (intent != null) {
             String uri = intent.getStringExtra("uri");
-            String params = intent.getStringExtra("data");
-            ((TextView)findViewById(R.id.uri)).setText(uri);
-            ((TextView)findViewById(R.id.params)).setText(params);
+            MPPushMsg msg = intent.getParcelableExtra("mp_push_msg");
+            ((TextView) findViewById(R.id.uri)).setText(uri);
+            ((TextView) findViewById(R.id.msg)).setText(msg.toString());
         }
     }
 }

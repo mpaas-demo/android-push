@@ -41,10 +41,9 @@ public class LauncherActivity extends FragmentActivity {
         if (uri == null) {
             return ;
         }
-        String params = intent.getStringExtra("data");
         Intent targetIntent = new Intent(LauncherActivity.this, LandingTargetActivity.class);
         targetIntent.putExtra("uri", uri.toString());
-        targetIntent.putExtra("data", params);
+        targetIntent.putExtra("mp_push_msg",intent.getParcelableExtra("mp_push_msg"));
         startActivity(targetIntent);
     }
 }

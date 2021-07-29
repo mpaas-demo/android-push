@@ -1,4 +1,5 @@
 apply plugin: 'maven'
+apply plugin: 'com.alipay.apollo.optimize'
 buildscript {
     repositories {
         mavenLocal()
@@ -19,9 +20,9 @@ buildscript {
         if (mPaasBuildType == 'aar') {
             classpath 'com.android.tools.build:gradle:3.5.0'
         } else {
-            classpath 'com.alipay.android:android-gradle-plugin:3.5.4'
+            classpath 'com.alipay.android:android-gradle-plugin:3.5.14'
         }
-        classpath 'com.android.boost.easyconfig:easyconfig:2.3.8'
+        classpath 'com.android.boost.easyconfig:easyconfig:2.5.0'
     }
 }
 allprojects {
@@ -42,7 +43,7 @@ allprojects {
             url 'http://maven.aliyun.com/nexus/content/repositories/google/'
             name 'aliyun-google'
         }
-
+        maven {url 'https://developer.huawei.com/repo/'}
     }
 }
     

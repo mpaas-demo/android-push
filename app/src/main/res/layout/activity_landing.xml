@@ -27,10 +27,10 @@
         <TextView
             android:layout_width="64dp"
             android:layout_height="wrap_content"
-            android:text="params"
+            android:text="msg"
             />
         <TextView
-            android:id="@+id/params"
+            android:id="@+id/msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
