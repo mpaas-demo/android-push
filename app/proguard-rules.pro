@@ -35,7 +35,7 @@
 -keepattributes SourceFile,LineNumberTable
 -keep class com.huawei.hianalytics.**{*;}
 -keep class com.huawei.updatesdk.**{*;}
--keep class com.huawei.**{*}
+-keep class com.huawei.**{*;}
 
 
 # oppo push 混淆配置
