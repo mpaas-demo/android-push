@@ -26,6 +26,8 @@ public class PLog {
 
     public static void e(String msg, Throwable t) {
         Log.e(TAG, msg, t);
+        sendBroadcast(msg);
+        sendBroadcast(t.getMessage());
     }
 
     private static void sendBroadcast(String msg) {

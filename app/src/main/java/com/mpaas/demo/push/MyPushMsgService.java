@@ -1,5 +1,6 @@
 package com.mpaas.demo.push;
 
+import com.alipay.mobile.common.rpc.RpcException;
 import com.alipay.pushsdk.content.MPPushMsgServiceAdapter;
 import com.alipay.pushsdk.data.MPPushMsg;
 import com.alipay.pushsdk.data.PushOsType;
@@ -26,9 +27,13 @@ public class MyPushMsgService extends MPPushMsgServiceAdapter {
 
         // 收到 token 后，绑定 userId
         // 开发者可缓存 token，在获取到自己的 userId 后再绑定
-        ResultPbPB bindResult = MPPush.bind(getApplicationContext(), MainActivity.userId, token);
-        PLog.d("userId: " + MainActivity.userId);
-        PLog.d("绑定 userId " + (bindResult.success ? "成功" : ("错误：" + bindResult.code)));
+        try {
+            ResultPbPB bindResult = MPPush.bind(getApplicationContext(), MainActivity.userId, token);
+            PLog.d("userId: " + MainActivity.userId);
+            PLog.d("绑定 userId " + (bindResult.success ? "成功" : ("错误：" + bindResult.code)));
+        } catch (RpcException e) {
+            PLog.e("MPPush.bind error: " + e.getMessage());
+        }
     }
 
     /**
